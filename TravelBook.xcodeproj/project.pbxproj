@@ -11,7 +11,7 @@
 		D909D33623DED7F90042197E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909D33523DED7F90042197E /* SceneDelegate.swift */; };
 		D909D33823DED7F90042197E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909D33723DED7F90042197E /* ViewController.swift */; };
 		D909D33B23DED7F90042197E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D909D33923DED7F90042197E /* Main.storyboard */; };
-		D909D33E23DED7F90042197E /* TravelBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D909D33C23DED7F90042197E /* TravelBook.xcdatamodeld */; };
+		D909D33E23DED7F90042197E /* TravekBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D909D33C23DED7F90042197E /* TravekBook.xcdatamodeld */; };
 		D909D34023DED8000042197E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D909D33F23DED8000042197E /* Assets.xcassets */; };
 		D909D34323DED8000042197E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D909D34123DED8000042197E /* LaunchScreen.storyboard */; };
 		D909D34B23DF09380042197E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909D34A23DF09380042197E /* ListViewController.swift */; };
@@ -68,7 +68,7 @@
 				D909D33F23DED8000042197E /* Assets.xcassets */,
 				D909D34123DED8000042197E /* LaunchScreen.storyboard */,
 				D909D34423DED8000042197E /* Info.plist */,
-				D909D33C23DED7F90042197E /* TravelBook.xcdatamodeld */,
+				D909D33C23DED7F90042197E /* TravekBook.xcdatamodeld */,
 			);
 			path = TravelBook;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 				D909D33423DED7F90042197E /* AppDelegate.swift in Sources */,
 				D909D33623DED7F90042197E /* SceneDelegate.swift in Sources */,
 				D909D34B23DF09380042197E /* ListViewController.swift in Sources */,
-				D909D33E23DED7F90042197E /* TravelBook.xcdatamodeld in Sources */,
+				D909D33E23DED7F90042197E /* TravekBook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,13 +346,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D909D33C23DED7F90042197E /* TravelBook.xcdatamodeld */ = {
+		D909D33C23DED7F90042197E /* TravekBook.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				D909D33D23DED7F90042197E /* TravekBook.xcdatamodel */,
 			);
 			currentVersion = D909D33D23DED7F90042197E /* TravekBook.xcdatamodel */;
-			path = TravelBook.xcdatamodeld;
+			path = TravekBook.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

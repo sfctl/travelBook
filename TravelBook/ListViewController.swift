@@ -31,7 +31,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func getData(){
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newPlace"), object: nil)
+    }
+    
+    @objc func getData(){
     
         let appDelagate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelagate.persistentContainer.viewContext
@@ -79,7 +83,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         chosenTitleId = idArray[indexPath.row]
         performSegue(withIdentifier: "to VC", sender: nil)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to VC" {
             let destinationVC = segue.destination as! ViewController

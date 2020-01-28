@@ -84,6 +84,13 @@ import CoreData
                                         nameText.text = annotationTitle
                                         commentText.text = annotationSubtitle
                                         
+                                        //kişi yerini değiştirsede hrtada görünen yer sabit kalsın
+                                        locationManager.stopUpdatingLocation()
+                                        
+                                        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+                                        let region = MKCoordinateRegion(center: coordinate, span: span)
+                                        mapView.setRegion(region, animated: true)
+                                        
                     }
                 }
             }
@@ -130,12 +137,15 @@ import CoreData
     
     //update edilen lokasyonları bir dizinin içine atan fonk
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if selectedTitle == ""{
         let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         //zoom derecesi
         let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
-        
+        } else {
+            
+        }
         
     }
     
@@ -158,6 +168,10 @@ import CoreData
         }catch{
             print("error")
         }
+        
+        //yeri kaydettikten sonra tekrar diğer vc ye git
+        NotificationCenter.default.post(name: NSNotification.Name("newPlace"), object: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     
